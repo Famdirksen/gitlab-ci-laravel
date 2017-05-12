@@ -11,6 +11,7 @@ RUN apt-get update && \
         libldap2-dev \
         curl \
         libtidy* \
+	libpcre3-dev \
     && rm -r /var/lib/apt/lists/*
 
 # PHP Extensions
