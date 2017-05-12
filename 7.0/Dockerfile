@@ -1,5 +1,5 @@
 FROM php:7.0
-MAINTAINER Krzysztof Kawalec <kf.kawalec@gmail.com>
+MAINTAINER Robin Dirksen <https://robindirksen.nl
 RUN apt-get update && \
     DEBIAN_FRONTEND=noninteractive apt-get install -y \
         openssh-client \
@@ -32,7 +32,7 @@ RUN docker-php-ext-install \
 RUN echo "memory_limit=-1" > $PHP_INI_DIR/conf.d/memory-limit.ini
 
 # Time Zone
-RUN echo "date.timezone=Europe/Warsaw" > $PHP_INI_DIR/conf.d/date_timezone.ini
+RUN echo "date.timezone=Europe/Amsterdam" > $PHP_INI_DIR/conf.d/date_timezone.ini
 
 VOLUME /root/composer
 
